@@ -12,7 +12,7 @@ const ServicesData: TServices = [
   {
     id: 1,
     thumbnail: "images/services/airport-transfer.svg",
-    title: "Airport Transfer",
+    title: "Airport Transfers",
     description:
       "We offer a wide range of services related to renting a car for all your travel needs.",
     cta: {
@@ -22,10 +22,10 @@ const ServicesData: TServices = [
   },
   {
     id: 2,
-    thumbnail: "images/services/airport-transfer.svg",
-    title: "Airport Transfer",
+    thumbnail: "images/services/ride-hailing.svg",
+    title: "Ride-Hailing",
     description:
-      "We offer a wide range of services related to renting a car for all your travel needs.",
+      "Risus augue dolor tincidunt aliquet. Nunc diam sapien nascetur aenean.",
     cta: {
       label: "Learn More",
       href: "wwww.google.com",

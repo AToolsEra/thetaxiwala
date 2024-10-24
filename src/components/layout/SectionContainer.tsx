@@ -30,7 +30,7 @@ export default function SectionContainer(props: SectionContainerProps) {
         </p>
       </div>
       {children && (
-        <div className="mt-6 sm:mt-8 max-w-6xl mx-auto w-full">{children}</div>
+        <div className="mt-6 max-w-6xl mx-auto w-full">{children}</div>
       )}
     </div>
   );

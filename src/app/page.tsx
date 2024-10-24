@@ -19,7 +19,7 @@ export default function Home() {
         }}
       >
         <div className="flex justify-center">
-          <div className="flex gap-4">
+          <div className="flex sm:flex-row flex-col gap-5">
             {ServicesData.map((service) => (
               <ServicesCard key={service.id} service={service} />
             ))}
