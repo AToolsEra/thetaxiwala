@@ -5,7 +5,8 @@ import {
   SectionContainer,
 } from "@/components/layout";
 import { ServicesCard } from "@/components/ourServices";
-import { ServicesData } from "./data";
+import { ServicesData, TestimonialData } from "./data";
+import { TestimonialCard } from "@/components/testimonials";
 export default function Home() {
   return (
     <div className="flex flex-col">
@@ -34,6 +35,23 @@ export default function Home() {
           background: "bg-[#F5F6F9]",
         }}
       />
+      <SectionContainer
+        options={{
+          title: "Let’s see what people say about us",
+          subtitle:
+            "Hear from our past customers how their experience have been when they made the choice to choose us.",
+        }}
+      >
+        <div className="flex justify-center sm:mt-6">
+          <div className="flex flex-wrap gap-5 justify-center">
+            {
+              TestimonialData.map((testimonial) => (
+                <TestimonialCard key={testimonial.id} testimonial={testimonial} />
+              ))
+            }
+          </div>
+        </div>
+      </SectionContainer>
       <Footer />
     </div>
   );

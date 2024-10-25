@@ -22,10 +22,10 @@ export default function SectionContainer(props: SectionContainerProps) {
       }`}
     >
       <div className="flex flex-col max-w-3xl mx-auto w-full">
-        <h2 className="text-2xl sm:text-3xl font-semibold text-left sm:text-center text-gray-900">
+        <h2 className="text-3xl sm:text-5xl font-bold text-left sm:text-center text-gray-900">
           {title}
         </h2>
-        <p className="mt-2 sm:mt-4 text-base sm:text-lg text-left sm:text-center text-gray-600">
+        <p className="mt-2 sm:mt-4 text-sm sm:text-xl text-left sm:text-center text-gray-500">
           {subtitle}
         </p>
       </div>

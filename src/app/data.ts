@@ -33,4 +33,47 @@ const ServicesData: TServices = [
   },
 ];
 
-export { ServicesData };
+type TTestimonial = {
+  id: number;
+  userName: string;
+  UserProfile: string;
+  FeedbackDescription: string;
+  Source: string;
+}[];
+
+const TestimonialData: TTestimonial = [
+  {
+    id: 1,
+    FeedbackDescription:
+      "I recently used TraviCabs for my trip, and it was a fantastic experience! The booking process was seamless, the cab was clean and comfortable, and the driver was professional and friendly.",
+    userName: "Elisa Parcel",
+    Source: 'Étudiante INSEEC, Lyon',
+    UserProfile: "/images/testimonial/testimonial1.svg",
+  },
+  {
+    id: 2,
+    FeedbackDescription:
+      "I recently used TraviCabs for my trip, and it was a fantastic experience! The booking process was seamless, the cab was clean and comfortable, and the driver was professional and friendly.",
+    userName: "Vincent Farre",
+    Source: 'Étudiant CFA CODIS, Paris',
+    UserProfile: "/images/testimonial/testimonial2.svg",
+  },
+  {
+    id: 3,
+    FeedbackDescription:
+      "I recently used TraviCabs for my trip, and it was a fantastic experience! The booking process was seamless, the cab was clean and comfortable, and the driver was professional and friendly.",
+    userName: "Paul Novana",
+    Source: 'Étudiante YNOV Campus, Rennes',
+    UserProfile: "/images/testimonial/testimonial3.svg",
+  },
+  {
+    id: 4,
+    FeedbackDescription:
+      "Jaltup est mon compagnon de route tout au long de mon alternance. Super intuitif, des conseils personnalisés, et une gestion facilitée sur tous les points administratifs.",
+    userName: "Claire Mazonnet",
+    Source: 'Étudiante IAE, Grenoble',
+    UserProfile: "/images/testimonial/testimonial4.svg",
+  },
+];
+ 
+export { ServicesData, TestimonialData };

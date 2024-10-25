@@ -17,7 +17,6 @@ export default function HeroSection() {
         className="md:hidden h-[760px] "
       >
         <Image
-
           src={'images/hero/bannerPhone.svg'} alt={'Hero Mobile'} layout="fill" objectFit="cover" />
       </div>
 
