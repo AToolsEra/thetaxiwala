@@ -47,7 +47,7 @@ const TestimonialData: TTestimonial = [
     FeedbackDescription:
       "I recently used TraviCabs for my trip, and it was a fantastic experience! The booking process was seamless, the cab was clean and comfortable, and the driver was professional and friendly.",
     userName: "Elisa Parcel",
-    Source: 'Étudiante INSEEC, Lyon',
+    Source: "Étudiante INSEEC, Lyon",
     UserProfile: "/images/testimonial/testimonial1.svg",
   },
   {
@@ -55,7 +55,7 @@ const TestimonialData: TTestimonial = [
     FeedbackDescription:
       "I recently used TraviCabs for my trip, and it was a fantastic experience! The booking process was seamless, the cab was clean and comfortable, and the driver was professional and friendly.",
     userName: "Vincent Farre",
-    Source: 'Étudiant CFA CODIS, Paris',
+    Source: "Étudiant CFA CODIS, Paris",
     UserProfile: "/images/testimonial/testimonial2.svg",
   },
   {
@@ -63,7 +63,7 @@ const TestimonialData: TTestimonial = [
     FeedbackDescription:
       "I recently used TraviCabs for my trip, and it was a fantastic experience! The booking process was seamless, the cab was clean and comfortable, and the driver was professional and friendly.",
     userName: "Paul Novana",
-    Source: 'Étudiante YNOV Campus, Rennes',
+    Source: "Étudiante YNOV Campus, Rennes",
     UserProfile: "/images/testimonial/testimonial3.svg",
   },
   {
@@ -71,9 +71,47 @@ const TestimonialData: TTestimonial = [
     FeedbackDescription:
       "Jaltup est mon compagnon de route tout au long de mon alternance. Super intuitif, des conseils personnalisés, et une gestion facilitée sur tous les points administratifs.",
     userName: "Claire Mazonnet",
-    Source: 'Étudiante IAE, Grenoble',
+    Source: "Étudiante IAE, Grenoble",
     UserProfile: "/images/testimonial/testimonial4.svg",
   },
 ];
- 
-export { ServicesData, TestimonialData };
+
+type TChooseUs = {
+  id: number;
+  icon: string;
+  title: string;
+  subtitle: string;
+}[];
+
+const ChooseUsData: TChooseUs = [
+  {
+    id: 1,
+    icon: "images/whyChooseUs/easy-rent.svg",
+    title: "Easy Rent",
+    subtitle:
+      "Rent a car at our rental with an easy and fast process without disturbing your productivity",
+  },
+  {
+    id: 2,
+    icon: "images/whyChooseUs/premium-quality.svg",
+    title: "Premium Quality",
+    subtitle:
+      "Our cars are always  clean to provide a more comfortable driving experience",
+  },
+  {
+    id: 3,
+    icon: "images/whyChooseUs/professional-agent.svg",
+    title: "Professional Agent",
+    subtitle:
+      "You can ask your travel companion to escort and guide your journey.",
+  },
+  {
+    id: 4,
+    icon: "images/whyChooseUs/car-safety.svg",
+    title: "Car Safety",
+    subtitle:
+      "We guarantee the safety of the engine on the car always running well with regular checks.",
+  },
+];
+
+export { ServicesData, TestimonialData, ChooseUsData };

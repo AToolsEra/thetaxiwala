@@ -15,7 +15,7 @@ export default function SectionContainer(props: SectionContainerProps) {
 
   return (
     <div
-      className={`flex flex-col px-4 sm:px-6 py-8 sm:py-12 min-h-[400px] sm:min-h-[500px] ${
+      className={`flex flex-col px-4 sm:px-6 py-8 sm:py-12 ${
         classnames ? classnames : ""
       }`}
     >

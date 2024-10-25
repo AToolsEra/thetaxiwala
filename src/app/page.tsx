@@ -1,9 +1,10 @@
 import { Footer, Header, SectionContainer } from "@/components/layout";
 import { ServicesCard } from "@/components/ourServices";
-import { ServicesData, TestimonialData } from "./data";
+import { ChooseUsData, ServicesData, TestimonialData } from "./data";
 import { TestimonialCard } from "@/components/testimonials";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import ChooseUsItem from "@/components/WhyChooseUs";
 export default function Home() {
   return (
     <div className="flex flex-col">
@@ -41,6 +42,7 @@ export default function Home() {
           </div>
         </div>
       </SectionContainer>
+
       <SectionContainer
         introduction={{
           title: "Our Services",
@@ -56,14 +58,22 @@ export default function Home() {
           </div>
         </div>
       </SectionContainer>
+
       <SectionContainer
         introduction={{
           title: "Why Choose Us",
           subtitle:
-            "We offer a wide range of services related to renting a car for all your travel needs.",
+            "We present many guarantees and advantages when you rent a car with us for your trip. Here are some of the advantages that you will get.",
         }}
         classnames="bg-[#F5F6F9]"
-      />
+      >
+        <div className="flex justify-center gap-4 flex-wrap">
+          {ChooseUsData.map((chooseUs) => (
+            <ChooseUsItem key={chooseUs.id} {...chooseUs} />
+          ))}
+        </div>
+      </SectionContainer>
+
       <SectionContainer
         introduction={{
           title: "Let’s see what people say about us",
@@ -73,18 +83,14 @@ export default function Home() {
       >
         <div className="flex flex-col justify-center sm:mt-6">
           <div className="flex flex-wrap gap-5 justify-center">
-            {
-              TestimonialData.map((testimonial) => (
-                <TestimonialCard key={testimonial.id} testimonial={testimonial} />
-              ))
-            }
-            
+            {TestimonialData.map((testimonial) => (
+              <TestimonialCard key={testimonial.id} testimonial={testimonial} />
+            ))}
           </div>
           <div className="flex justify-center mt-16">
-
-          <a href="">
+            <a href="">
               <Button className="mb-20 px-6 text-xs rounded-full bg-[#0F0F0F] text-white font-bold">
-              Show More
+                Show More
               </Button>
             </a>
           </div>
