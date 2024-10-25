@@ -1,18 +1,47 @@
-import {
-  Footer,
-  Header,
-  HeroSection,
-  SectionContainer,
-} from "@/components/layout";
+import { Footer, Header, SectionContainer } from "@/components/layout";
 import { ServicesCard } from "@/components/ourServices";
 import { ServicesData } from "./data";
+import { Button } from "@/components/ui/button";
+import Image from "next/image";
 export default function Home() {
   return (
     <div className="flex flex-col">
       <Header />
-      <HeroSection />
+
+      <SectionContainer classnames="bg-black">
+        <div className="flex gap-x-20  xs:flex-col lg:flex-row gap-y-7">
+          <div className="flex flex-col space-y-9">
+            <div className="flex flex-col">
+              <h1 className="md:text-6xl text-5xl font-bold text-white">
+                Transparent.
+                <br /> Safe. <br className="sm:hidden" />
+                <span className="text-[#FFBF08]">Reliable</span>
+              </h1>
+              <p className="mt-2 sm:mt-4 text-base sm:text-lg text-gray-300">
+                We at, thetaxiwala.com offers you the best in class taxi service
+                in the most competitive price. So have a hassle-free booking
+                with us in the most affordable rates.
+              </p>
+            </div>
+            <a href="/book-now">
+              <Button className="rounded-full bg-[#FFBF08] text-black font-bold">
+                Book Now
+              </Button>
+            </a>
+          </div>
+          <div className="flex w-full xs:max-h-[255px] lg:max-h-[366px]">
+            <Image
+              src="/images/hero/hero-illustration.svg"
+              alt="Taxi"
+              layout="responsive"
+              height={366}
+              width={568}
+            />
+          </div>
+        </div>
+      </SectionContainer>
       <SectionContainer
-        options={{
+        introduction={{
           title: "Our Services",
           subtitle:
             "We offer a wide range of services related to renting a car for all your travel needs.",
@@ -27,12 +56,12 @@ export default function Home() {
         </div>
       </SectionContainer>
       <SectionContainer
-        options={{
+        introduction={{
           title: "Why Choose Us",
           subtitle:
             "We offer a wide range of services related to renting a car for all your travel needs.",
-          background: "bg-[#F5F6F9]",
         }}
+        classnames="bg-[#F5F6F9]"
       />
       <Footer />
     </div>
