@@ -65,19 +65,28 @@ export default function Home() {
         classnames="bg-[#F5F6F9]"
       />
       <SectionContainer
-        options={{
+        introduction={{
           title: "Let’s see what people say about us",
           subtitle:
             "Hear from our past customers how their experience have been when they made the choice to choose us.",
         }}
       >
-        <div className="flex justify-center sm:mt-6">
+        <div className="flex flex-col justify-center sm:mt-6">
           <div className="flex flex-wrap gap-5 justify-center">
             {
               TestimonialData.map((testimonial) => (
                 <TestimonialCard key={testimonial.id} testimonial={testimonial} />
               ))
             }
+            
+          </div>
+          <div className="flex justify-center mt-16">
+
+          <a href="">
+              <Button className="mb-20 px-6 text-xs rounded-full bg-[#0F0F0F] text-white font-bold">
+              Show More
+              </Button>
+            </a>
           </div>
         </div>
       </SectionContainer>

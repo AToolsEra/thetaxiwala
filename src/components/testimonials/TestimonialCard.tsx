@@ -24,7 +24,8 @@ export default function TestimonialCard(props: TTestimonialCardProps) {
   console.log('userProfile', UserProfile)
   const profileAvatarSize = 46;
   return (
-    <div className="justify-between flex flex-col gap-5 bg-white p-7 rounded-lg shadow-md border border-gray-200 max-w-[500px]">
+    <div>
+    <div className="justify-between flex flex-col gap-5 bg-white p-7 rounded-lg shadow-lg hover:shadow-md transition-shadow duration-300 border border-gray-200 max-w-[500px]">
       <div>
         <p className="text-lg font-normal leading-7 text-[#3A3A41]">{FeedbackDescription}</p>
       </div>
@@ -35,6 +36,7 @@ export default function TestimonialCard(props: TTestimonialCardProps) {
           <Image src={UserProfile} alt={userName} width={profileAvatarSize} height={profileAvatarSize} />
         </div>
       </div>
+    </div>
     </div>
   );
 }
