@@ -96,6 +96,13 @@ export default function Home() {
           </div>
         </div>
       </SectionContainer>
+
+      <SectionContainer classnames="bg-[#F5F6F9] min-h-[620px] justify-center">
+        <div className="flex flex-col items-center justify-center gap-y-8 rounded-lg bg-[#FF540E] min-h-[350px]">
+          <h2 className="text-6xl text-white">Book your ride today</h2>
+          <Button className="rounded-full bg-black font-bold">Book Now</Button>
+        </div>
+      </SectionContainer>
       <Footer />
     </div>
   );
