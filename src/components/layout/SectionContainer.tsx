@@ -1,4 +1,5 @@
 import React from "react";
+import { Montserrat, Manrope } from "next/font/google";
 
 type SectionContainerProps = {
   introduction?: {
@@ -8,6 +9,9 @@ type SectionContainerProps = {
   classnames?: string;
   children?: React.ReactNode;
 };
+
+const manrope = Manrope();
+const montserrat = Montserrat();
 
 export default function SectionContainer(props: SectionContainerProps) {
   const { introduction, children, classnames } = props;
@@ -22,10 +26,14 @@ export default function SectionContainer(props: SectionContainerProps) {
       <div className="flex flex-col max-w-screen-xl mx-auto w-full overflow-x-hidden">
         {introduction ? (
           <div className="flex flex-col max-w-3xl mx-auto w-full">
-            <h2 className="text-3xl sm:text-5xl font-bold text-left sm:text-center text-gray-900">
+            <h2
+              className={`text-3xl sm:text-5xl font-bold text-left sm:text-center text-primary-foreground ${manrope.className}`}
+            >
               {title}
             </h2>
-            <p className="mt-2 sm:mt-4 text-sm sm:text-xl text-left sm:text-center text-gray-500">
+            <p
+              className={`mt-2 sm:mt-4 text-sm sm:text-xl text-left sm:text-center text-secondary-foreground ${montserrat.className}`}
+            >
               {subtitle}
             </p>
           </div>
