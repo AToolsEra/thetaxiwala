@@ -75,5 +75,71 @@ const TestimonialData: TTestimonial = [
     UserProfile: "/images/testimonial/testimonial4.svg",
   },
 ];
- 
-export { ServicesData, TestimonialData };
+
+
+type TContactUs = {
+  id: number;
+  contactTypeIcon: string;
+  contactValue: string;
+  title: string;
+}[];
+const contactUsData: TContactUs = [
+  {
+    id: 1,
+    contactTypeIcon: '/images/contactUs/mail.svg',
+    contactValue: 'lorenna@gmail.com',
+    title: 'mail'
+  },
+  {
+    id: 2,
+    contactTypeIcon: '/images/contactUs/phone.svg',
+    contactValue: '+62 8221 1222 0001',
+    title: 'phone'
+  },
+  {
+    id: 3,
+    contactTypeIcon: '/images/contactUs/clock.svg',
+    contactValue: 'Everyday : 08.00-21.00',
+    title: 'time'
+  },
+  {
+    id: 4,
+    contactTypeIcon: '/images/contactUs/locationMarker.svg',
+    contactValue: 'Jl. Raya Cihaluan No.112 Tangerang Selatan, Indonesia 41222',
+    title: 'location'
+  }
+]
+
+type TSocialLinks = {
+  id: number;
+  socialTypeIcon: string;
+  socialLinks: string;
+  title: string;
+}[];
+const socialLinksData: TSocialLinks = [
+  {
+    id: 1,
+    socialTypeIcon: '/images/contactUs/linkedIn.svg',
+    socialLinks: 'https://www.linkedin.com/',
+    title: 'LinkedIn',
+  },
+  {
+    id: 2,
+    socialTypeIcon: '/images/contactUs/twitter.svg',
+    socialLinks: 'https://x.com/',
+    title: 'Twitter',
+  },
+  {
+    id: 3,
+    socialTypeIcon: '/images/contactUs/facebook.svg',
+    socialLinks: 'https://facebook.com/',
+    title: 'Facebook',
+  },
+  {
+    id: 4,
+    socialTypeIcon: '/images/contactUs/instagram.svg',
+    socialLinks: 'https://www.instagram.com/',
+    title: 'Instagram',
+  }]
+
+export { ServicesData, TestimonialData, contactUsData, socialLinksData };

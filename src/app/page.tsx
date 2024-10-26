@@ -1,9 +1,11 @@
 import { Footer, Header, SectionContainer } from "@/components/layout";
 import { ServicesCard } from "@/components/ourServices";
-import { ServicesData, TestimonialData } from "./data";
+import { contactUsData, ServicesData, socialLinksData, TestimonialData } from "./data";
 import { TestimonialCard } from "@/components/testimonials";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { SocialLinks } from "@/components/socialLinks";
+import { ContactUsCard } from "@/components/contactUs";
 export default function Home() {
   return (
     <div className="flex flex-col">
@@ -64,6 +66,8 @@ export default function Home() {
         }}
         classnames="bg-[#F5F6F9]"
       />
+
+      {/* Testimonials */}
       <SectionContainer
         introduction={{
           title: "Let’s see what people say about us",
@@ -78,15 +82,56 @@ export default function Home() {
                 <TestimonialCard key={testimonial.id} testimonial={testimonial} />
               ))
             }
-            
           </div>
           <div className="flex justify-center mt-16">
-
-          <a href="">
+            <a href="">
               <Button className="mb-20 px-6 text-xs rounded-full bg-[#0F0F0F] text-white font-bold">
-              Show More
+                Show More
               </Button>
             </a>
+          </div>
+        </div>
+      </SectionContainer>
+
+      {/* Contact Us  */}
+      <SectionContainer
+        introduction={{
+          title: "Contact Us",
+          subtitle:
+            "If you need consultation with us, you can write a message or call us, we will respond as quickly as possible",
+        }}
+      >
+        <div className="flex flex-col sm:flex-row justify-between ">
+          <div className=" sm:self-center sm:w-1/2 h-[390]">
+            <div className="flex flex-col justify-center h-[276] p-2">
+              {
+                contactUsData.map((contact) => (
+                  <ContactUsCard key={contact.id} contact={contact} />
+                ))
+              }
+            </div>
+            <SocialLinks />
+          </div>
+          <div className="flex flex-col sm:w-1/2">
+            <div className="flex flex-col">
+              {/* office map */}
+              <iframe
+                width="500px"
+                height="450px"
+                style={{ border: 0, alignSelf:'flex-end' }}
+                allow="fullscreen"
+                aria-hidden="false"
+                src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=210,%20Neelkanth%20Complex,%20Rajpur%20Road,%20Dehradun-248001+(Jakwal%20Advisors)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+              ></iframe>
+              <div className="flex mt-16 w-[500] sm:self-end">
+                <a href="">
+                  <Button className="text-xm ml-2 p-7 px-7 rounded-none bg-[#FF540E] text-white font-semibold">
+                    Office Center Map
+                  </Button>
+                </a>
+              </div>
+            </div>
+
           </div>
         </div>
       </SectionContainer>
