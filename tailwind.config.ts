@@ -42,6 +42,8 @@ const config: Config = {
         },
         border: "hsl(var(--border))",
         lightgray: "hsl(var(--border-light-gray))",
+        GreyText: "hsl(var(--GreyText))",
+        ReadMoreText: "hsl(var(--ReadMoreText))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         chart: {

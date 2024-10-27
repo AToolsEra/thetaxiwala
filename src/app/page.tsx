@@ -116,8 +116,8 @@ export default function Home() {
             <div className="flex flex-col">
               {/* office map */}
               <iframe
-                width="500px"
                 height="450px"
+                className="md:w-[500] w-full"
                 style={{ border: 0, alignSelf:'flex-end' }}
                 allow="fullscreen"
                 aria-hidden="false"

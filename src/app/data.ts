@@ -142,4 +142,38 @@ const socialLinksData: TSocialLinks = [
     title: 'Instagram',
   }]
 
-export { ServicesData, TestimonialData, contactUsData, socialLinksData };
+type TFooterSubsection = {
+  id: number;
+  heading: string;
+  subHeadings: {
+    text: string;
+    id: number;
+  }[]
+}[];
+
+const FooterSubSectionData: TFooterSubsection = [
+  {
+    id: 1,
+    heading: 'Support',
+    subHeadings: [
+      { id: 1, text: 'Contact us' },
+      { id: 2, text: 'Online Chat' },
+      { id: 3, text: 'Whatsapp' },
+      { id: 4, text: 'Telegram' },
+      { id: 5, text: 'Help' },
+    ],
+  },
+  {
+    id: 2,
+    heading: 'FAQ',
+    subHeadings: [
+      { id: 1, text: 'Account' },
+      { id: 2, text: 'Payments' },
+      { id: 3, text: 'Returns' },
+      { id: 4, text: 'Copyright' },
+      { id: 5, text: 'Language' },
+    ],
+  },
+];
+
+export { ServicesData, TestimonialData, contactUsData, socialLinksData, FooterSubSectionData };
