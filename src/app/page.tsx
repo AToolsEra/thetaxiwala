@@ -157,7 +157,9 @@ export default function Home() {
           </div>
         </div>
       </SectionContainer>
+      <SectionContainer classnames="bg-black">
       <Footer />
+      </SectionContainer>
     </div>
   );
 }
