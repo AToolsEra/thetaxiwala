@@ -19,9 +19,11 @@ const montserrat = Montserrat();
 export default function Home() {
   return (
     <div className="flex flex-col">
-      <Header />
+      <div className="bg-white sticky top-0 z-50 shadow-md">
+        <Header />
+      </div>
 
-      <SectionContainer classnames="bg-black">
+      <SectionContainer id="home" classnames="bg-black section">
         <div className="flex gap-x-20  xs:flex-col lg:flex-row gap-y-7">
           <div className="flex flex-col space-y-9">
             <div className="flex flex-col">
@@ -57,6 +59,8 @@ export default function Home() {
       </SectionContainer>
 
       <SectionContainer
+        classnames="section"
+        id="services"
         introduction={{
           title: "Our Services",
           subtitle:
@@ -73,12 +77,13 @@ export default function Home() {
       </SectionContainer>
 
       <SectionContainer
+        id="whyUs"
         introduction={{
           title: "Why Choose Us",
           subtitle:
             "We present many guarantees and advantages when you rent a car with us for your trip. Here are some of the advantages that you will get.",
         }}
-        classnames="bg-secondary"
+        classnames="bg-secondary section"
       >
         <div className="flex justify-center gap-4 flex-wrap">
           {ChooseUsData.map((chooseUs) => (
@@ -88,6 +93,8 @@ export default function Home() {
       </SectionContainer>
 
       <SectionContainer
+        classnames="section"
+        id="testimonials"
         introduction={{
           title: "Let’s see what people say about us",
           subtitle:
@@ -120,6 +127,8 @@ export default function Home() {
       </SectionContainer>
 
       <SectionContainer
+        classnames="section"
+        id="contactUs"
         introduction={{
           title: "Contact Us",
           subtitle:
@@ -157,7 +166,9 @@ export default function Home() {
           </div>
         </div>
       </SectionContainer>
-      <Footer />
+      <SectionContainer classnames="bg-black">
+        <Footer />
+      </SectionContainer>
     </div>
   );
 }
