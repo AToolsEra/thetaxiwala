@@ -8,6 +8,7 @@ type SectionContainerProps = {
   };
   classnames?: string;
   children?: React.ReactNode;
+  id?: string;
 };
 
 const manrope = Manrope();
@@ -19,9 +20,10 @@ export default function SectionContainer(props: SectionContainerProps) {
 
   return (
     <div
-      className={`flex flex-col px-4 sm:px-6 py-8 sm:py-12 ${
+      className={`scroll-mt-16 flex flex-col px-4 sm:px-6 py-8 sm:py-12 ${
         classnames ? classnames : ""
       }`}
+      id={props?.id ? props.id : ""}
     >
       <div className="flex flex-col max-w-screen-xl mx-auto w-full overflow-x-hidden">
         {introduction ? (
